@@ -5,6 +5,6 @@ export type TaskModel = {
   startDate: number;
   completeDate: number | null; //  completed
   interruptedDate: number | null; // if not completed
-  type:'worktime' | 'shotBreakTime' | 'longBreakTime';
+  type:'workTime' | 'shotBreakTime' | 'longBreakTime';
   
 };
