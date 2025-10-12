@@ -9,7 +9,6 @@ import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
 import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
 import { Tips } from "../Tips";
-import { toast } from "react-toastify";
 import { showMessage } from "../../adapters/showMessage";
 
 
@@ -18,6 +17,7 @@ import { showMessage } from "../../adapters/showMessage";
 export function MainForm(){
   const {state, dispatch } = useTaskContext();
   const tasknameInput  = useRef<HTMLInputElement>(null);
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name || ''; ;
 
   // ciclos
   const nextCycle = getNextCycle(state.currentCycle);
@@ -72,6 +72,7 @@ export function MainForm(){
         placeholder='Digite algo'
         ref={tasknameInput}
         disabled={!!state.activeTask}
+        defaultValue={lastTaskName}
         
         />
       </div>
@@ -109,7 +110,7 @@ export function MainForm(){
       onClick={handleInterruptTask}
       key='botao_button'
       />
-     )}; 
+     )} 
        
     </div>
   
