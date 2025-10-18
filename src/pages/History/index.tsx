@@ -2,7 +2,6 @@ import { TrashIcon } from "lucide-react";
 import { Container } from "../../components/Container";
 import { DefaultButton } from "../../components/DefaultButton";
 import { Heading } from "../../components/Heading/Heading";
-
 import { MainTemplate } from "../../templates/MainTemplate";
 import sytles from './styles.module.css'
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
@@ -10,9 +9,7 @@ import { formatDate } from "../../utils/formatDate";
 import { getTaskStatus } from "../../utils/getTaskStatus";
 import { sortTasks, type SortTasksOptions } from "../../utils/sortTasks";
 import { useEffect, useState } from "react";
-
 import { showMessage } from "../../adapters/showMessage";
-import { set } from "date-fns";
 import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
 
 
@@ -43,6 +40,11 @@ useEffect(() => {
     }),
   }));
 },[state.tasks]);
+
+  useEffect(() =>{
+    document.title = 'Histórico- Chrono Pomodoro';
+  }, [])
+
  
 useEffect(() => {  
   if(!confirmClearHistory) return;

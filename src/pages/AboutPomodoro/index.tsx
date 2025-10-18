@@ -3,8 +3,15 @@ import { MainTemplate } from '../../templates/MainTemplate';
 import { GenericHtml } from '../../components/GenericHtml';
 import { Heading } from '../../components/Heading/Heading';
 import { RouterLink } from '../../components/RouterLink';
+import { useEffect } from 'react';
 
 export function AboutPomodoro() {
+  useEffect(() =>{
+    document.title = 'Entenda a Técnica pomodoro - Chrono Pomodoro';
+  }, [])
+
+
+
   return (
     <MainTemplate>
       <Container>
@@ -18,7 +25,7 @@ export function AboutPomodoro() {
             garantir descansos para evitar o cansaço mental.
           </p>
 
-          <img src='https://placehold.co/1920x1080' alt='' />
+          <img src='https://blog.unoeste.br/wp-content/uploads/2024/06/cliclo-tecnica-pomodoro-1024x576.png' alt='' />
 
           <h2>Como funciona o Pomodoro tradicional?</h2>
 

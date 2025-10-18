@@ -42,18 +42,18 @@ export function Menu(){
        <HouseIcon/> 
     </RouterLink>
     <RouterLink className={styles.containerLink}  
-    href='history' aria-label='Ir para a Historico'
+    href='/history' aria-label='Ir para a Historico'
     title='Ir para a Historico'> 
         <HistoryIcon/> 
     </RouterLink>
     <RouterLink className={styles.containerLink}
-    href='#' aria-label='Ir para as configurações'
+    href='/settings' aria-label='Ir para as configurações'
     title='Ir para as configurações'> 
         <SettingsIcon/> 
     </RouterLink>
    
     <a className={styles.containerLink}
-    href='#' aria-label='Mudar Tema'
+    href='/#' aria-label='Mudar Tema'
     title='Mudar Tema'
     onClick={handleThemeChange }> 
     
